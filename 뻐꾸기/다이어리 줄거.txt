@@ -1,0 +1,45 @@
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (the-truth)
+$ git switch master
+Switched to branch 'master'
+M       diary.txt
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (master)
+$ git stash
+Saved working directory and index state WIP on master: 3b2b8d7 I like bujangnim
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (master)
+$ git commit -am "I really like bujang"
+[master b2aac20] I really like bujang
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (master)
+$ git switch the-truth
+Switched to branch 'the-truth'
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (the-truth)
+$ git stash pop
+On branch the-truth
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   diary.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (a91fb93fbf55c35074225fc143787c4adea11818)
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (the-truth)
+$ git commit -am "나의 진심을 전합니다"
+[the-truth 1704401] 나의 진심을 전합니다
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (the-truth)
+$ git switch master
+Switched to branch 'master'
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (master)
+$ git switch the-truth
+Switched to branch 'the-truth'
+
+ict04-25@ict4025 MINGW64 ~/Desktop/SecretDiary (the-truth)
+$ git switch master
+Switched to branch 'master'

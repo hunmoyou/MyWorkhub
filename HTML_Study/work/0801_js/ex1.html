@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 변수 선언과 초기화
+        // 자바스크립트는 자료형이 없다.(내부적으로 존재하며, 
+        //                              값이 할당될 때 자동으로 지정된다.)
+        // let 변수명1; //변수 선언! 하지만 값은 저장하지 않았다.
+        // let 변수명2 = 10; // 변수를 선언하면서 초기값으로 10을 저장한다.
+
+        //변수 a1을 선언하면서 그곳에 100을 저장해보자!
+        let a1 = 100;
+        var a2 = 30;
+
+        a1 = 70;// 이미 만들어져 있는 변수 a1의 값을 70으로 변경한다.
+        let str = "문자열";
+
+        let a3 = a1+a2; // 결과는 a3에 저장된다. (100)
+        document.write("a3:"+a3);// 앞의 "a3:"이라는 문자열에 
+            // 변수 a3이 기억하고 있는 100이라는 정수를 더한다.
+            // 하지만 숫자와 문자열은 더할 수 없다. 그래서
+            // 앞의"a3:" 문자열에 숫자 100을 연결하는 연결연산자로
+            // 해석한다.
+
+        document.write("<br/>");
+        document.write(str);
+        document.write("<br/>");
+        document.write(a3+":"+a2);
+        document.write("<br/>");
+        document.write(a3+a2);
+    </script>
+</body>
+</html>

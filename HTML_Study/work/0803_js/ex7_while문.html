@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let i=1;
+        while(i<=10){
+            document.write(i+"<br/>");
+            
+            if(i%3 == 0)
+                break;
+            ++i; //증감식(이 부분이 생략되면 무한반복이 된다.)
+        }
+
+        document.write("--------------");
+        document.write("3의 배수는 출력하지 않도록 하자!<br/>");
+        i=0; 
+        while(i<=10){ //i가 10보다 작거나 같다면 반복문 수행
+            ++i; //i값 1증가
+            if(i%3 !=0) //i를 3으로 나눴을 때 나머지가 0이면
+                continue;//다음 회차로 이동 23행으로
+
+            document.write(i+"<br/>");
+            // ++i; //주석한 이유: 여기에 증감식이 있으면
+                    //26행의 conitnue문을 만날 때 수행하지 못하므로 무한반복에 빠진다.
+        }
+    </script>
+</body>
+</html>

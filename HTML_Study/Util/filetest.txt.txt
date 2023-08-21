@@ -1,0 +1,12 @@
+해리 케인이 토트넘 홋스퍼에서 바이에른 뮌헨으로 적을 옮긴다.
+
+출처 : Best Eleven(https://www.besteleven.com)
+
+disable 서버로 보낼 때 안가짐.. 수정 불가능 
+readonly 보내짐...    수정 불가능 
+
+
+url "호출하고자_하는_서버경로",
+data 서버로 보내고자 하는 파라미터(인자)
+type: "전송방식(get/post)",
+dataType: "서버로부터_응답되어오는_자원(return되는_자료형)"

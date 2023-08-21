@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 350px;
+            height: 450px;
+            border: 1px solid blue;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+    
+    <button type="button" onclick="exe(2)">2단</button>&nbsp;
+    <button type="button" onclick="exe(3)">3단</button>&nbsp;
+    <button type="button" onclick="exe(4)">4단</button>&nbsp;
+    <button type="button" onclick="exe(5)">5단</button>&nbsp;
+    <button type="button" onclick="exe(6)">6단</button>&nbsp;
+    <button type="button" onclick="exe(7)">7단</button>&nbsp;
+    <button type="button" onclick="exe(8)">8단</button>&nbsp;
+    <button type="button" onclick="exe(9)">9단</button>
+</form>
+<div id="box"></div>
+    <script>
+
+        let box =document.getElementById("box");
+
+        function exe(dan){
+            //한번에 box에 적용할 문자열 변수를 선언
+            let msg="";
+            for(let i=1; i<=9; i++){
+            msg=msg+dan+"*"+i+"="+dan*i +"<br/>";
+            // msg+=dan+"*"+i+"="+dan*i +"<br/>";
+            }
+            box.innerHTML=msg;
+        }
+    </script>
+</body>
+</html>

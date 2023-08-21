@@ -1,0 +1,6 @@
+\192.168.0.99
+ol#menu>li>a:hover{} :마우승ㄹㄴㄻㄴ
+./ = 현재위치
+display: inline; 
+display: inline-block; 인라인, 블록 둘다 가능
+

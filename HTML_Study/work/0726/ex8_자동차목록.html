@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #232323;
+            color: #fff;    
+        }
+        div#wrap a{ color: #fff;}
+        div#wrap{
+            border: 1px solid #fff;
+            width: 700px;
+            margin: 50px auto; /*위/아래  좌/우*/
+            margin-bottom: 0px;            
+        }
+        div#wrap>h1{
+            margin: 10px;
+            font: bold 35px sans-serif;
+                           
+        }
+        ul#carlist{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0px;
+            word-spacing: 0px;
+        }
+        li.carbox{ /*li태그들 중 클래스가 carbox인 요소들*/
+            display: inline-block;
+            width: 170px;
+            border: 1px solid #fff;
+            text-align: center;
+            padding-bottom: 10px;
+            margin: 0 0 46px 46px;         
+        }
+        li.carbox>span>a{
+            font: 12px sans-serif; text-decoration: none;
+            
+        }    
+        li.carbox>a{ /* a는 인라인레벨이므로 안에 있는 이미지의 크기로 인해
+                        문법의 합리성이 떨어지는 코드다.*/
+            display: block;
+            width: 160px;
+            height: 120px;
+            border: 5px solid #232323;   
+        }
+        li.carbox>a:hover{
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="wrap">
+        <h1>자동차목록</h1>   
+        <ul id="carlist">
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Audi-R8.jpg"/>
+                </a>
+                <span><a href="">Audi-R8</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Bentley-Continental_GTC.jpg"/>
+                </a>
+                <span><a href="">Bentley-Continental_GTC</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/BMW-Z4.jpg"/>
+                </a>
+                <span><a href="">BMW-Z4</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Aston_Martin-One-77.jpg"/>
+                </a>
+                <span><a href="">Aston_Martin-One-77</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Ferrari-458_Italia.jpg"/>
+                </a>
+                <span><a href="">Ferrari-458_Italia</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Hyundai-Genesis.jpg"/>
+                </a>
+                <span><a href="">Hyundai-Genesis</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Jaguar-XJ.jpg"/>
+                </a>
+                <span><a href="">Jaguar-XJ</a></span>
+            </li>
+            <li class="carbox">
+                <a href="">
+                    <img src="./images/Lamborghini-Reventon.jpg"/>
+                </a>
+                <span><a href="">Lamborghini-Reventon</a></span>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+</html>

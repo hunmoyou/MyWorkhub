@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>datalist연습</h1>
+    </header>
+    <form action="test.jsp" method="post">
+        <fieldset>
+            <legend>datalist연습</legend>
+            <label for="ss">Homepage:</label>
+            <input type="url" id="ss" name="u_ss" required list="s_list"/>
+            <!-- required는 필수입력 항목임을 의미한다. -->
+            <button type="submit">보내기</button>
+
+            <datalist id="s_list">
+                <option value="https://www.google.com" label="Google"/>
+                <option value="https://www.naver.com" label="Naver"/>
+                <option value="https://www.daum.net" label="Daum"/>
+            </datalist>
+        </fieldset>
+    </form>
+</body>
+</html>

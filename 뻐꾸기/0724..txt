@@ -1,0 +1,75 @@
+07/24
+<!doctype html>
+<html> = 처음과 끝
+<head> = 제목 , <title> 페이지 제목
+<body> = 내용
+<h1~6> = heading (제목) 중요한 머릿기사로 표현
+<p> : html paragraph tag (의미가있는 줄바꿈=단락)
+<br/> = 줄바꿈
+<strong> = 강하게 표시
+<b> = 강하게 표시
+	ex) <b style= "color: red(#f00);"> =해당부분색깔변경
+		a=숫자 10, 0~15자리 숫자 a=10, b=11
+<a> = 링크태그 ex <a href="">네이버</a>
+<div> = div태그는 하나의 영역을 구별하고자 할 때 사용한다.
+        블록레벨이며 크기는 너비는 모두 차지하고 있으며, 높이는 내용의
+        높이만큼 차지한다.
+	ex <div style="border: 1px solid black :">
+<ol> = 순번이 있는 리스트
+<ul> = 순번이 없는 리스트
+<li> = 목록 만들기
+<table> = 표
+<caption> = 테이블 제목
+<tr> = 행
+<td> = 열
+<th> = 테이블의 헤드라인 
+<thead> = 테이블 제목
+<tbody> = 테이블 내용
+<tfoot> = 테이블 하단
+<colspan> = 테이블 열병합
+<rowspan> = 테이블 행병합
+<colgroup> = 열 크기조정 
+	ex <colgroup>
+                <col width="80px"/>
+                <col width="130px"/>
+                <col width="150px"/>
+                <col width="*"/>
+            </colgroup>
+<th> = 테이블 항목의 헤드라인
+<img src= " "> = 이미지 첨부
+	ex <td><img src="images/naver.png" width="20px"/></td>
+<form method="get" = (속도빠름, 보안고려X)
+<form method="post" = (속도느림, 보안고려O)
+	ex <form method="get" action="요청할서버의경로">
+                <!--아래의 레이블은 아이디가 s_id인 태그의 레이블이다.-->
+                <label for="s_id">아이디:</label>
+                <input type="text" id="s_id" name="u_id"/><br/>
+
+                <label for="s_pw">비밀번호:</label>
+                <input type="password" id="s_pw" name="u_pw"/><br/>
+
+                <label for="s_hobby">취미:</label>
+                <input type="checkbox" id="s_hobby" 
+                name="u_hobby"  value="독서"/>독서
+                <input type="checkbox" id="s_hobby2" 
+                name="u_hobby"  value="영화감상"/>영화감상
+                <input type="checkbox" id="s_hobby3" 
+                name="u_hobby"  value="음악감상"/>음악감상
+                <input type="checkbox" id="s_hobby4" 
+                name="u_hobby"  value="게임"/>게임  
+		<!--form태그의 method는 전송방식(get/post)
+                action은 서버의 경로가 들어가야 함!
+                그리고 각 태그의 id는 현재 문서상에서 해당 id를 가진
+                태그를 접근하고자 할 때 필요한 속성이다.
+                name속성은 서버로 전송되는 파라미터(서버로 전달되는 값:인자)
+                이름이므로 서버에서 값을 받을 때 사용한다.
+            	--> (type) 유효성 검사 된다.
+&nbsp; = 간격 설정=공백(개당 spacebar정도)
+-------------------------------------------------------------------------------
+shift+alt+방향키 = 복사
+ctrl+, = 설정
+shift+home = 항목 전체 설정 (뭐 할때 shift 누르고)
+!누르고 tab 누른다= 기본 구성 양식 
+블록레벨 = 줄바꿈 o 영역 조정 가능 , 인라인라벨 = 줄바꿈 x
+	ex 인라인블ㄹ록안에 블록레벨만 안된다
+<!---->= 주석달기

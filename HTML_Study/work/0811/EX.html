@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+    </style>
+</head>
+<body>
+    <form action="" >
+        <fieldset>
+            <legend>dddddd</legend>
+            <select id="car">
+            <option value="제조회사" >선택</option>
+            <option value="제조회사" >제조회사</option>
+            <option value="제품타입" >제품타입</option>
+            <option value="최고가격" >최고가격</option>
+            </select>
+            <label for="comp"></label>
+            <input type="text" id="comp">
+            <button type="button" onclick="exe()">검색</button>
+        </fieldset>
+    </form>
+
+    <div id="list">      
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script>
+            function exe(){
+                let comp = $("#comp").val();
+
+                if(comp.trim().length > 0){
+                    $.ajax({
+                        url:"http://makeup-api.herokuapp.com/api/v1/products.json",
+                        data:{"brand":comp},
+                        type:"get",
+                        datatype:"json"                      
+                    }).done(function(data){
+                        console.log(data);
+                            let msg = "";
+                        for(let i=0; i<data.length; i++){  
+                            msg += "<ul id='zet'>";                       
+                            msg += "<li>"+"<img src='"+data[i].image_link+"'>"+"</li>";
+                            msg += "<li>"+data[i].name+"</li>";
+                            msg += "<li>"+data[i].price+"</li>";
+                            msg += "</ul>";  
+                        }
+                        $("#list").html(msg);                      
+                    }).fail(function(err){
+                    });
+                }            
+            }
+
+            
+
+        </script>
+</body>
+</html>

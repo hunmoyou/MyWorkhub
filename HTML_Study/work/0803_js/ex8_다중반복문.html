@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        별표 출력하기 
+          * * * * 
+          * * * * 
+          * * * * 
+          * * * * 
+        */
+       /*let k=0;
+       while(k<4){
+        document.write("*&nbsp;");
+        ++k;
+       }
+       */
+        for(let j=0; j<4; j++){ //행 단위로 반복하는 반복문
+            for(let k=0; k<4; k++){//열 단위로 별표를 출력하는 반복문
+                document.write("*&nbsp;");
+            }//안쪽for의 끝
+            document.write("<br/>"); //줄바꿈
+        }//바깥쪽 for의 끝
+    </script>
+</body>
+</html>

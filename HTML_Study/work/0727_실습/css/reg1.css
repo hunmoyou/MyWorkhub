@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+#contents{
+    width: 900px;
+    height: auto;
+    margin: auto;
+}
+
+.sub_title{
+    background: url(../img/sub_title.png) no-repeat;
+    text-indent: -9999px;
+
+}
+h1.title01{
+    height: 30px;
+    background-position: 0 0;
+}
+h2.title03{
+    border-bottom: 2px solid #666;
+    height: 20px;
+    width: 55px;
+    background-position: 0 -30px;
+    margin-bottom: 10px;
+}
+h2.title04{
+    height: 20px;
+    width: 100px;
+    background-position: -55px -30px;
+    margin-bottom: 10px;
+}
+p.title_src{ /* p태그들 중 class가 title_src인 요소*/
+    font-size: 15px;
+    font-weight: bold;
+    color: #222;
+    padding: 10px 0 40px 5px;
+    /*padding-top: 10px;
+    padding-bottom: 40px;
+    padding-left: 5px;*/
+}
+p.chk_area{
+    text-align: right;
+}
+    
+.b_agree{
+    width: 100px;
+    height: 30px;
+    background-position: 0 -70px;
+}
+.b_noagree{
+    width: 130px;
+    height: 30px;
+    background-position: -100px -70px;
+}
+textarea.noresize{
+    resize: none;
+    background-color: #dedede;
+    pointer-events: none; /*비활성화*/
+}

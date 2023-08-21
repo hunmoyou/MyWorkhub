@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            height: 40px;
+            font-weight: bold;
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        nav ul li{
+            display: inline-block;
+            margin-right: 20px;
+        }
+        @media all and (min-width:800px) {
+            article {width: 100%;}
+            nav{
+                border: 2px solid #f00;
+                width: 100%;
+            }
+            section{
+                display: inline-block;
+                width: 60%;
+                border: 2px solid #0f0;
+            }
+            aside{
+                display: inline-block;
+                width: 20%;
+                border: 2px solid #00f;
+            }
+        }
+
+
+        @media all and (min-width:400px) and (max-width:800px){
+            article {width: 800px;}
+            nav{
+                border: 2px solid #f00;
+                width: 80%;
+                margin: auto;
+                display: flex;
+                justify-content: space-around;
+            }
+            section{
+                display: inline-block;
+                width: 596px;
+                border: 2px solid #0f0;
+            }
+            aside{
+                display: inline-block;
+                width: 596px;
+                border: 2px solid #00f;
+                background-color: #898989;
+                color: #fff;
+            }
+            nav ul li{
+                margin: auto;
+                width: 150px;
+                text-align: center;
+              
+            }
+        }
+
+
+        @media all and (max-width:399px) {
+            article {width: 320px;}
+            nav{
+                /* border: 2px solid #f00; */
+                width: 316px;
+            }
+            section{
+                display: inline-block;
+                width: 316px;
+                border: 2px solid #0f0;
+            }
+            aside{
+                display: inline-block;
+                width: 316px;
+                border: 2px solid #00f;
+            }
+            nav ul li{
+                width: 316px;
+                text-align: center;   
+                background-color: aquamarine; 
+                border-bottom: 1px solid #00f;         
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Menu01</a></li>
+                <li><a href="#">Menu02</a></li>
+                <li><a href="#">Menu03</a></li>
+                <li><a href="#">Menu04</a></li>
+                <li><a href="#">Menu05</a></li>
+                <li><a href="#">Menu06</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <header>
+            <h2>Media Queries Test</h2>
+        </header>
+        <p>
+            국내에서 불특정 다수를 향한 '묻지마 칼부림 테러'가 충격파를 몰고 오고 있는 가운데 유럽축구도 비슷한 일로 파장이 커지고 있다.<br/> 심지어 사망자가 발생하는 최악의 결과가 발생했다.
+            9일(한국시간) 로이터 통신 등에 따르면 전날 AEK 아테네(그리스)의 홈구장인 <br/>OPAP 스타디움 인근에서 아테네와 디나모 자그레브(크로아티아) 팬들의 폭력 사태가 벌어졌다. <br/>
+            로이터는 "그리스 경찰에 따르면 29세 남성이 두 클럽 팬들 사이의 격렬한 충돌로 심각한 부상을 입었다"고 전했다. 이 남성은 칼에 찔려 <br/>끝내 사망한 것으로 알려졌다.
+            양 팀은 이날 유럽축구연맹(UEFA) 챔피언스리그(UCL) 3차 예선 1차전을 치를 예정이었다. 원정팀 자그레브 <br/>선수들이 훈련을 마친 뒤 1시간 30분가량이 지난 뒤 100여 명의 자그레브 팬들이 아테네 팬들과 충돌했다.
+        </p>
+    </section>
+    <aside>
+        <p>sideMenu1</p>
+        <p>sideMenu2</p>
+        <p>sideMenu3</p>
+    </aside>
+</body>
+</html>

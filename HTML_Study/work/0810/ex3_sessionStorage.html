@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #results{
+            border-top: 2px solid #ababab;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Session Storage 예제</h1>
+    </header>
+    <div id="form">
+        <form id="travelForm">
+            <table class="form">
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="button">
+                            <input type="button" value="Go"
+                                onclick="addData()"/>
+                                <input type="button" value="Clear Storage"
+                                onclick="ClearStorage()"/>
+                        </td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td class="label">Traveler</td>
+                        <td>
+                            <input type="text" name="traveler" id="traveler"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Destination</td>
+                        <td>
+                            <input type="text" name="destination" id="destination"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Transportation</td>
+                        <td>
+                            <input type="text" name="transportation" 
+                            id="transportation"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div id="results">
+        <!-- 저장된 storage값을 표현할 곳 -->
+
+    </div>
+
+    <script>
+        let db = getStorage(); //localstorage를 받는다.
+        let result; //결과를 저장할 변수
+        let res; //result라는 아이디를 가진 요소를 저장할 곳(div)
+
+        //현재 창이 로드될 때 무조건 수행하는 곳
+        window.onload = function(){
+            //현재 문서에서 아이디가 results라는 요소 검색하여 res에 저장
+            res = document.getElementById("results");
+
+            viewData();
+        }
+
+        function viewData(){
+            //만약! 저장소에 저장된 값이 있을 때 results라는 
+            //아이디를 가진 요소에 표현하도록 하자!
+            result = ""; //초기화
+
+            //저장소(db)에 저장된 key와 value를 얻어내어 result에 적재한다.
+
+            for(let i=0; i<db.length; i++ ){
+                let key = db.key(i); //키를 하나 얻어낸다.
+                //db 즉 LocalStorage는 key와 value가 하나의 쌍을 이루어 저장된다.
+
+                //key를 통해 연결된 value를 얻어낸다.
+                let value = db.getItem(key);
+
+                result += key+":"+value+"<br/>";
+            } //for의 끝
+
+            //현재문서안에 아이디가 results인 div요소에 HTML로 표현
+            res.innerHTML = result;
+        }
+
+        function getStorage(){
+            try{
+                //예외가 발생가능한 코드들을 기술하는 곳
+            if(window.sessionStorage)
+             return window.sessionStorage;
+            }catch(e){
+                //try영역에서 예외가 발생했을 때만 수행하는 곳
+                return undefined;
+            }
+        }
+
+        //저장소에 자원을 저장하는 함수
+        function addData(){
+            //먼저 사용자가 입력한 값들(traveler, destination, transportation)을
+            //가져와야 한다
+            let v1 = document.getElementById("traveler").value;
+            let v2 = document.getElementById("destination").value;
+            let v3 = document.getElementById("transportation").value;
+
+            //가져온 값들에 대한 유효성 검사 해야하지만 패스,,,
+            //if(v1.trim().length >0)
+            //키와 함께 저장소에 저장하자 
+            db.setItem("transportation",v3);
+            db.setItem("traveler",v1);
+            db.setItem("destination",v2);
+
+            //화면에 표현
+            viewData();            
+        }
+
+        function ClearStorage(){
+            //저장소 삭제
+            db.clear();
+        }
+
+    </script>
+</body>
+</html>

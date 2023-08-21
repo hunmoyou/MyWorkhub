@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="init()">
+    <form>
+        <fieldset>
+            <legend>Progress연습</legend>
+
+            <label for="s1">Progress:</label>
+            <progress value="0.05" max="1" id="s1" name="s1">
+                브라우저가 progress를 지원하지 않습니다.
+            </progress>
+            <span>5</span>% <!-- 앞서 배운 output으로 해도 좋은 방법이다. -->
+
+            <button type="submit">보내기</button>
+        </fieldset>
+    </form>
+
+    <script>
+        let inter = null; // 인터벌 객체를 저장할 변수
+        // 인터벌 객체란 지정한 시간만큼 간격을 두고 지정한 함수를 지속적으로 호출한다.
+
+        function init(){
+            // 0.5초 간격으로 pGo()라는 함수를 호출하는 인터벌객체 생성!
+            inter = setInterval("pGo()", 500); //1000=1초
+        }
+
+        function pGo(){
+            console.log("^^");
+            // 현재문서에서 아이디가 s1인 요소를 검색하여 검색된 s1의 값(value)을
+            // 일정한 값으로 증가시켜야 한다.
+
+            //1) s1이라는 아이디를 가진 요소 검색
+            let pp = document.getElementById("s1");
+
+            //2) 현재문서안에 폼안에 fieldset안에 span요소 검색
+            let pspan = document.querySelector("form fieldset span");
+            // 위를 검색한 이유는 s1의 값을 span요소에도 동일하게 문자열로 표현하기 위함이다
+
+            //3) s1의 값을 조금 증가시키자
+            pp.value = pp.value + 0.05;// 프로그레스바의 값을 증가시켰다.
+
+            //4) 2)에서 검색된 span태그의 문자열을 pp의 값으로 변경하자!
+            pspan.innerText = parseInt(pp.value*100);
+
+            // 프로그래스바의 값이 1이면 진행완료이므로
+            // 움직이고 있던 인터벌 객체를 소멸시켜야 한다.
+            if(pp.value >= 1){
+                //인터벌객체 소멸!!!!!!!!!!!!!!!!
+                clearInterval(inter);
+                alert("완료!");
+            }
+        }
+    </script>
+</body>
+</html>

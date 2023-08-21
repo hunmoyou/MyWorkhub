@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+    <button type="button" id="btn1">연습1</button>
+    <button type="button" id="btn2">연습2</button>
+    <button type="button" id="btn3">연습3</button>
+
+
+    <div id="dialog" title="ICT인재개발원">
+        공지합니다. <br/>
+        ICT인재개발원 IT전문가들을 위한 교육시스템을 기반으로 하는 
+        온/오프 라인 교육기술 협회인 ICT기술협회 산하 <br/>
+        인재개발원입니다.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function(){
+            let option = {
+                modal:true,
+                // autoOpen:false, // 호출되는 즉시 대화상자 표시 default는 true다.
+                //position:[300,100], //
+                position: { my: "left top", at: "right bottom",  of:"#btn3"}, 
+                //          my: 자신의 위치(left, right, top, bottom, center) 
+                //          at: 기점이 되는 요소 상의 위치(left, right, top, bottom, center) 
+                //          of: 기점이 되는 요소(각 선택자들로 적용)
+                title: "인재개발원",
+                resizable : false,
+            };
+
+            $("#dialog").dialog(option);
+        });
+    </script>
+</body>
+</html>

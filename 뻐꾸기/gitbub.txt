@@ -1,0 +1,14 @@
+git remote add origin http~
+git remote -v
+git push origin master
+git push -u origin emptylist :이후에는 git push
+git branch -r :현재 원격 브랜치 목록 출력
+git branch -a :원격, 로컬 브랜치 목록 출력
+git clone http~ :(다른 브랜치 추가해야한다,,)
+git fetch [remote-name] : 원격 저장소의 새로운 브랜치 및 데이터를 가져온다,
+$ git pull [remote-name] [branch-name]:원격 Git 저장소의 변경 사항을 다운로드하고 자동으로 현재 브랜치에 이를 병합하는 Git 명령
+
+markdown all in one -- 
+README.md
+git clone http~~~ . :fork(마지막에 . 추가)
+

@@ -1,0 +1,6 @@
+쿠키 -클라이언트
+세션 -서버
+
+web storage - key value형식으로 클라이언트 쪽에 자원을 저장하는 api다.
+local storage - 방문한 사이트 마다 1개씩 관리
+session storage -세션과 같이 창마다 1개씩 관리 (저장안되요,,)

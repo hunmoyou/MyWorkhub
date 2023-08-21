@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box{
+      width: 300px;
+      height: 160px;
+      line-height: 160p;
+      font-size: 50px;
+      font-weight: bold;
+      border: 1px solid blue;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <form method="post">
+    <label for="age">나이</label>
+    <input type="text" id="age" name="u_age">
+    <button type="button" onclick="exe()">확인</button>
+  </form>
+  <div id="box"></div>
+  <script>
+    let box = document.getElementById("box");
+    
+    function exe(){
+      let sc = document.getElementById("age");
+      let sc_val = sc.value;
+
+     if(sc_val.trim().length>0){
+      let age = parseInt(sc_val);
+    if(age>=100)
+    box.innerText="고령";
+    else if(age >= 90)
+     box.innerText="90대";
+    else if(age >= 80)
+    box.innerText="80대";
+    else if(age>=70)
+    box.innerText="70대";
+    else if(age<=69)
+    box.innerText="60대";
+    else if(age<=59)
+    box.innerText="50대";
+    else if(age<=49)
+    box.innerText="40대";
+    else if(age<=39)
+    box.innerText="30대";
+    else
+    box.innerText="청년";
+  }else{
+    alert("나이를 입력하세요");
+    sc.value="";
+    sc.focus();
+  }
+}
+  </script>
+</body>
+</html>

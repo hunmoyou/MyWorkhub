@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <style>
+        #tabs>div{
+            background-color: #fff;
+        }
+        .w500{
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contents" class="w500">
+        <div id="tabs">
+            <!-- 누르는 탭들 -->
+            <ul>
+                <li><a href="#t1">첫번째</a></li>
+                <li><a href="#t2">두번째</a></li>
+                <li><a href="#t3">세번째</a></li>
+            </ul>
+
+            <!-- 각 탭의 내용들 -->
+            <div id="t2">두번째 tab의 내용입니다.</div>
+            <div id="t1">
+                국제동물복지기금(IFAW·International Fund for Animal Welfare)이 고양이 인식 개선 및 오랜 기간 사람과 함께한 고양이를 위해 2002년 제정한 날로, 매년 8월 8일이다.
+                 IFAW는 세계에서 가장 큰 동물복지운동단체 중 하나로, 유기동물 구조는 물론 캐나다에서 북극곰 사냥 금지 운동을 이끌어낸 단체로도 잘 알려져 있다.
+                전 세계의 많은 고양이 집사들은 8월 8일 고양이의 날이 되면 SNS 등에 해시태그(#WorldCatDay)를 달고 고양이 사진을 게재하면서 ‘고양이의 날’을 축하한다.
+                 <br/> 또 고양이의 날에는 유기묘 입양을 촉구하는 행동도 이뤄지며, 관련 업계들에서는 고양이 용품을 특가로 내놓는 행사를 실시하기도 한다.
+                한편, 각 나라마다 고양이의 날을 따로 지정해 이를 기념하고 있는데, ▷미국은 10월 29일 ▷러시아는 3월 1일 ▷일본은 2월 22일을 ‘고양이의 날’로 기념한다.<br/>
+                또 우리나라에서도 2009년 고경원 작가가 9월 9일을 고양이의 날로 정한 바 있는데, 이는 ‘고양이는 목숨이 9개’라는 속설에서 착안해 아홉 구(九)와 오랠 구(久)의 음을 딴 것이다. 특히 영국과 미국에서는 검은 고양이에 대한 편견을 없애자는 취지로 별도의 ‘검은 고양이의 날’까지 제정해 기념하는 것으로 알려져 있다.
+                [네이버 지식백과] 세계 고양이의 날 (시사상식사전, pmg 지식엔진연구소)
+            </div>
+            <div id="t3">
+                이날 경기에는 호날두 외에 사디오 마네, 브로조비치 등 최근 영입된 유럽 축구스타들이 뛰었다.         
+                알나스르는 4강에서 이라크팀 알쇼르타를 상대한다. 호날두는 순항했지만 왕년의 팀 동료 벤제마는 고배를 들었다. <br/>
+                벤제마와 호날두는 스페인 라리가 레알 마드리드에 2009년 입단해 2018년까지 11시즌을 함께 뛰며 라리가는 
+                물론 유럽축구연맹 챔피언스리그에서 수차례 우승을 합작했다.<br/>이후 호날두는 맨체스터 유나이티드를 거쳐 지난해 알나스르에 입단했다. 벤제마는 올 시즌을 앞두고 레알을 떠나 알이티하드로 이적했다.
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function(){
+           $("#tabs").tabs();
+        });
+    </script>
+</body>
+</html>

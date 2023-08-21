@@ -1,0 +1,47 @@
+let :선언하다....
+function exe(){
+location.href="";   =javascript로 페이지 이동
+}
+
+
+
+
+<script>
+        // 스크립트 영역
+
+        //원하는 함수 정의
+        function exe(){
+
+            //원하는 유효성 검사 실시
+            //현재문서(document)에서 아이디가 ch01이라는 요소의
+            //선택되었는지? 확인하고자 한다.
+
+            //1) 먼저 현재무넛에서 아이디가 ch01인 요소를 검색하여
+            // 변수 ch1에 저장하자!
+            let ch1 =document.getElementById("ch01");
+
+            console.log("ch01:"+ch1.checked);
+
+            let ch2 =document.getElementById("ch02");
+            console.log("cho2:"+ch2.checked);
+            //원하는 페이지로 이동~~~~!
+            // a href=""와 같은 역활을 하는 스크립트 문법
+            //location.href="reg2.html";
+            //location.href="http://www.naver.com";
+        }
+    </script>
+
+
+<script>
+        let a = 10; //어떤 함수에도 사용 가능
+        function test1(){
+            //현재 화면에 a의 값을 출력하자!
+            document.write(a);
+        
+        }
+        
+        function test2(){
+            let b = 30; //지역변수 선언 , test2함수에만 사용가능
+            document.write(b);
+        }
+    </script>

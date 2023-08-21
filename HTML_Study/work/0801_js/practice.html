@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 300px;
+            border: 1px solid blue;
+            font-size: 100px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 300px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form method="post">
+        <label for="score">점수입력</label>
+        <input type="text" id="score" name="u_score"/><br/>
+        <button type="button" onclick="test()">확인</button>
+    </form>
+    <div id="box"></div>
+    <script>
+        function test(){
+            //현재문서에서 아이디가 score인 요소에 값(value)를 얻어낸다.
+            let v1 = document.getElementById("score").value;
+
+
+            //60점 이상인지? 아닌지?를 판단하기 위해 숫자형으로 변환하자!
+            let value = parseInt(v1);
+            
+
+            //현재문서에서 아이디가 box인 요소를 검색한다.
+            //검색한 결과를 변수 box에 저장하자
+            let box = document.getElementById("box");
+
+            //점수가 90점 이상이면 "우수", (value >= 90)
+            //그렇지 않고 60~89점 사이면 "보통" (value >=60 && value <=89)
+            //그것도 아니고 60점 미만이면 "노력"을 box에 출력하자.,., (value < 60)
+            if(value >= 95){ //조건 만족시 수행
+               
+            box.innerText="a+";
+            }else if(value >=90 && value <95)//조건에 불만족시 수행
+                box.innerText="a-";
+            else if(value >=85 && value <90)
+                box.innerText="b+";
+            else if(value >=80 && value <85)
+                box.innerText="b-";
+            else if(value >=75 && value <80)
+                box.innerText="c+"; 
+            else if(value >=70 && value<75)
+                box.innerText="c-"; 
+            else if(value >=60 && value<69)
+                box.innerText="d";
+            else 
+                box.innerText="나가";
+            // 95점이상이면 a+ 
+            // 90점 이상이면 a-
+            // 85점부터 89점까지 b+
+            // 80~84 b-
+            // 75~79 c+
+            // 70~74 c-
+            // 60~69 d
+            //  0~59 나가 
+           
+        }
+    </script>
+</body>
+</html>

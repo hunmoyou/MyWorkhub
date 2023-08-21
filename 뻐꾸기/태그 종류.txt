@@ -1,0 +1,86 @@
+***태그의 종류
+
+<!DOCTYPE html> : 문서 형식을 선언한다. (Document Type Declaration)
+
+<!-- --> : 주석을 나타낸다.
+
+<html> : 파일 형식을 나타낸다.
+
+<head> : 웹페이지에 대한 정보를 저장하는 곳이다.
+
+<meta> : 본문을 설명하는 태그이다. 
+
+예) <meta charset = "utf-8"> : 모든언어표현
+
+<title> : 웹페이지의 제목은 브라우저 윈도우의 제목으로도 표시된다.
+
+또한 검색엔진이 웹페이지를 분석 할 때 사용하는 제목이다.
+
+<body> : 웹페이지의 모든내용이 표시된다. 브라우저 안에 표시되는 부분이다.
+
+<br>(break) : 줄을 바꾼다. 종료태그가 없어서 공백요소, 새로운 단락을 시작하지 않고 줄바꿈시에 사용한다. new line tag (의미없는 줄바꿈)
+
+<p> : html paragraph tag (의미가있는 줄바꿈=단락)
+
+<pre> : 입력한 그대로 브라우저에 표시된다. 
+
+<span> : 문장단위로 텍스트의 영역을 지정한다.
+
+<img src=" "> : img는 태그의 이름, src나 width,height는 img태그의 속성이다. 
+
+<h1~6> : heading (제목) 중요한 머릿기사로 표현
+
+<b> : 볼드체만 정의 그러나 <strong> : 강하게 표시하며 의미를 담고 있는 태그.
+
+<u> : 더 강조를 하기위해서 밑줄을 나타낸다.
+
+<i> : 이탤릭체 기울인글꼴을 나타낸다.
+
+<code> : 텍스트가 코드임을 나타낸다.
+
+<em> : 텍스트를 강조한다.
+
+<sup> : 위첨자를 나타낸다. <sub> : 아래첨자를 나타낸다.
+
+<hr> : (horizontal line) : 수평선을 나타낸다.
+
+&nbsp : 공백 문자 한개를 나타낸다 예) <p>공백&nbsp문자&nbsp한개</p>
+
+&lt : 왼쪽이 오른쪽보다 작다 (little) '<'
+
+&gt : 왼쪽이 오른쪽보다 크다 (great) '>'
+
+***태그의 부모와 자식
+
+***리스트 태그
+
+<li> : 목록 만들기 (list) 
+
+<ul> :  unordered list 숫자가 없는 리스트
+
+<ol> : ordered list 숫자가 있는 리스트
+
+***링크
+
+<a href = " " target = " " title = " ">
+
+<a> : 링크이며 속성으로는 href (HyperText Reference), target, title이 있다.
+
+target의 값에는 _self(현재 윈도우에서 열림), _blank(새로운 윈도우에서 열림)
+
+
+***테이블
+
+<table border = " "> : 테이블 생성, 테이블의 두께를 설정
+
+<caption> : 테이블의 제목
+
+<th> : table head 테이블 항목의 헤드라인
+
+<tr> : table row 행을 뜻한다
+
+<td> : table data 열을 뜻한다
+
+colspan : 열병합을 뜻한다.
+
+rowspan : 행병합을 뜻한다.

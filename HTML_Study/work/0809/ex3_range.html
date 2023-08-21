@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Range연습</legend>
+            <label for="s1">Range:</label>
+            <input type="range" id="s1" name="s1"
+                min="0" max="100" value="90" step="5" 
+                onchange="setVal(this)"/>
+            <output id="s2">90</output>
+            <button type="submit">보내기</button>
+        </fieldset>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+
+        function setVal(ran){
+            //document.getElementById('s2').value = ran.value;
+            $("#s2").val(ran.value);
+            //$("#s2").val($(ran).val());
+        }
+    </script>
+</body>
+</html>

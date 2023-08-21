@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul.container{
+            list-style: none;
+            padding: 0;
+            border: 1px solid pink;
+            width: 80%;
+            margin: auto; 
+            /* flex 개념*/
+            display: flex;
+            flex-direction: row; /* 기본값*/ 
+            flex-wrap: wrap; /* nowrap이 기본값*/
+            /* justify-content: flex-start;*/  /*기본값 */ 
+            /* justify-content: flex-end;    */
+            /* justify-content: center; */
+            justify-content: space-between;
+        }
+        li.item{
+            width: 50px;
+            height: 50px;
+            background-color: purple;
+            text-align: center;
+            line-height: 50px;
+            flex-grow: 1; /* 자식요소 간에 비율 */
+           
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li class="item">항목1</li>
+        <li class="item">항목2</li>
+        <li class="item">항목3</li>
+        <li class="item">항목4</li>
+        <li class="item">항목5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t1{
+            width: 600px;
+            border-collapse: collapse;
+
+        }
+        #t1 td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>jquery를 이용한 체크박스 선택</h1>
+    <table id="t1">
+        <colgroup>
+        <col width="30px"/>
+        <col width="*"/>
+        </colgroup>
+        <thead>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="all"/>
+                    <em>전체선택</em> <!--emphasize태그는 
+                                        문장 내에서 강조하고 싶을 때 쓴다
+                                        (i태그와 strong태그를 합친것)-->
+                </td>
+            </tr>
+        </thead>
+        <tbody id="eee">
+            <tr>
+                <td><input type="checkbox" id="ch1" name="ch1"/></td>
+                <td>제목1</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="ch2" name="ch2"/></td>
+                <td>제목2</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="ch3" name="ch3"/></td>
+                <td>제목3</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="ch4" name="ch4"/></td>
+                <td>제목4</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="ch5" name="ch5"/></td>
+                <td>제목5</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="ch6" name="ch6"/></td>
+                <td>제목6</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            //tbody에 있는 모든 체크박스를 가져온다.
+            let ar=$("#t1>tbody").find(":checkbox");
+
+            //id가 all인 요소를 클릭할 때마다 수행하는 이벤트 적용!
+
+            $("#all").click(function(){
+                //아이디가 all체크박스를 클릭할 때마다 수행하는 곳
+                //alert(this.checked);
+                ar.prop("checked", this.checked);
+
+                //all이 체크가 된 상태일 때는 em태그의 내용을 "전체해제",
+                //만약! 체크가 선택되지 않은 상태일 때는 "전체선택"
+                let str ="";
+                if(this.checked)
+                    str="전체해제";
+                else
+                    str="전체선택";
+
+                $(this).next().text(str);
+            });
+        });
+    </script>
+</body>
+</html>

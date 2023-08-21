@@ -1,0 +1,9 @@
+client----->(요청) server ex ---> db----->client
+
+server----->(응답) client 
+
+client----->(요청) server ----> client = 동기식
+
+client ------> xhr(xmlhttprequest)----->(요청) server ----->xhr(응답) ----->client =비동기식 통신
+
+

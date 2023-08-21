@@ -1,0 +1,46 @@
+/* 팝업창 */
+div#popup{
+    width: 250px;
+    height: 150px;
+    border: 1px solid black;
+    /* 현재 팝업창은 body를 기준하여 위에서 110px
+        왼쪽에서 350px 떨어진 곳에 표현해야 함! */
+    position: absolute;
+    top: 110px;
+    left: 350px; 
+    display: none;          
+}
+div#title_bar{
+    width: 100%;
+    height: 20px;
+    border-bottom: 1px solid black;
+    background-color: pink;
+    text-align: right;
+}
+div#exit_area{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    right: 0px;
+    /* border: 1px solid red; */
+}
+/* 
+    id가 exit_area인 요소 안에 있는 a태그의 크기를16px로 지정하고,
+    배경이미지를 images폴더 안에 있는 exit.png로 설정한다. 그리고
+    글꼴은 안보이도록 한다.
+    위치는 절대적위치를 가지며 오른쪽 끝에 존재해야 한다.
+*/
+div#exit_area>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../images/exit.png) no-repeat;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    font-size: 0;
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    background-size: 16px;
+}

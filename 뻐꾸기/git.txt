@@ -1,0 +1,63 @@
+
+$ pwd : 현재 위치한 폴더 출력
+$ ls :  하위 폴더, 파일 보기
+$ ls -l : 하위 폴더, 파일 자세히 보기
+  ls -a :숨겨진 파일
+$ clear : 삭제 
+$ cd :원하는 경로로 이동
+$ mkdir .. : 폴더생성
+touch  : 파일 생성
+start  :파일, 폴더 열기
+cd .. :상위폴더로(나가기) 
+cd ../.. 더 상위폴더로 
+rm -rf파일 삭제
+
+git init :현재 작업 중인 디렉터리에 새로운 Git 레포지토리를 생성
+
+git status :명령어를 실행하면 현재 레포지토리의 상태가 출력됩니다
+
+git add/ git add . 변경된 파일들을 스테이징 영역(또는 인덱스)에 추가하는데 사용됩니다./(현재파일에 있는 모든)
+
+git commit -m :, 스테이징 영역에 추가된 변경사항들을 실제로 레포지토리에 저장(커밋)하는데 사용
+
+git commit : 창 띠움
+git log/ git log --oneline :
+touch .gitignore : ignore 파일 생성
+git restore --staged . 
+git commit --amend :가장 최근의 커밋을 수정
+
+*.log: 모든 .log 파일을 무시합니다.
+!important.log: .gitignore 파일에서 더 나중에 나오는 패턴이 더 우선순위가 높으므로, !important.log 패턴은 important.log라는 이름의 파일은 무시하지 않도록 예외를 설정합니다.
+/tmp`: 상대 경로로 시작하므로 프로젝트의 루트 디렉토리에 있는 tmp 디렉토리만 무시합니다.
+debug/  : debug라는 이름의 디렉토리를 무시합니다.
+doc/*.txt`: doc 디렉토리에 있는 .txt 파일을 무시합니다.
+
+git branch 브랜치명 :브랜치 생성
+git branch : 브랜치 확인
+git switch 브랜치명 : 해당 브랜치로 이동 
+git log --oneline --all --graph :
+git switch -c emptylist :emptylist라는 브랜치 생성 후 바로 그 브랜치로 이동
+git commit -am "" :에드 후 커밋까지 원큐에...(처음 생성된 파일은 안됩니다!!)
+git checkout : 브랜치 이동 -구버전임, 다양한 기능이 있음 
+git branch -d 브랜치명 : 브랜치 삭제(삭제할 브랜치말고 다른 브랜치에서 삭제가능)
+git branch -D 브랜치명 : 
+git branch -ㅡ 브랜치명 : 브랜치 이름 변경
+
+merge 할때 기점이 되는 브랜치에서 시작
+git diff : add를 하지않은 상태에서 이전 커밋과의 비교(working diredctory안에서 만)
+git diff HEAD : add를 한 상태에서도 이전 커밋과 비교 가능
+git diff a...b :(a와 b에 커밋아이디 입력해서 비교 가능)
+git stash :
+git stash pop : 가장 마지막에 들어온값이 나간다(나간 스태시는 목록에서 삭제됨)
+git stash list : stash했던 목록들 
+git stash apply a: a스태시 적용
+git stash drop 스태시아이디: 스태시 제거하기
+git stash clear : 스태시 모두 제거하기
+git checkout 커밋아이디 : 그 커밋으로 이동
+git checkout HEAD~# : 현재 HEAD에서 한 단계 이전의 커밋으로 체크아웃하는데 사용
+git restore 파일명 : 전으로 복구,,
+git restore --staged :지정된 파일의 변경사항을 HEAD의 상태로 되돌린다
+git restore --source 커밋아이디 파일명 :  특정 커밋 또는 브랜치의 파일 상태로 현재 작업 디렉토리의 파일을 복원하는 데 사용
+git reset <commit-hash> :현재 HEAD를 특정 커밋으로 이동시키는데 사용 지정된 커밋 이후의 모든 커밋이 사라진다
+git reset --hard :커밋과 그 안의 내용 삭제,,
+git reset --hard ORIG_HEAD :다시 복구

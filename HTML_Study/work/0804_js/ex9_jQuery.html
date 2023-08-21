@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="test">여기는 H1</h1>
+    <p>p요소1</p>
+    <p>p요소2</p>
+    <p>p요소3</p>
+    <span>이것은 span</span>
+    <p class="test">p요소4</p>
+    <p>p요소5</p>
+    <div>여긴DIV</div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            let str ="";//문자열을 저장할 변수선언
+            /*
+            //test라는 class를 가진 요소(h1,p)그리고
+            //span요소, div요소 들을 하나의 배열로 수집한다.
+            let ar= $(".test, span, div");
+
+            
+            for(let i=0; i<ar.length; i++){
+                //str += ar[i].innerHTML+","; //자바스크립트 문법
+                str += ar.eq(i).text()+",";
+            }//for문의 끝
+
+            */
+           //또는 
+           $(".test, span, div").each(function(){
+                //위의 선택자에 해당되는 요소를 만날때마다 
+                //현재 영역을 수행한다.
+                str+=$(this).text()+",";
+           });
+            alert(str);
+            
+
+
+        });
+    </script>
+</body>
+</html>

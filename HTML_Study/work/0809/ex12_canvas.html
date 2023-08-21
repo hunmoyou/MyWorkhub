@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #can1{
+            border: 3px dotted black;
+        }
+    </style>
+</head>
+<body>
+    <h1>canvas연습</h1>
+    <canvas id="can1" width="600" height="300"></canvas>
+
+    <script>
+        window.onload = function(){
+            let mc = document.getElementById("can1");
+
+            let ctx = mc.getContext("2d");
+            if(ctx){
+               let str="한국 ICT협회";
+              ctx.shadowColor = "#000";
+              ctx.shadowOffsetX =3;
+              ctx.shadowOffsetY =3;
+              ctx.shadowBlur=10;
+
+              ctx.fillStyle="rgba(0,0,255,1)";
+              ctx.fillRect(20,20,200,100);
+
+              ctx.fillStyle="green";
+              ctx.shadowColor="rgba(0,100,100,0.5)"
+              ctx.shadowOffsetX =5;
+              ctx.shadowOffsetY =5;
+              ctx.shadowBlur=5;
+              ctx.font="40px  Georgia";
+              ctx.fillText(str,250,75);
+
+                
+                
+            }
+        }
+    </script>
+</body>
+</html>
